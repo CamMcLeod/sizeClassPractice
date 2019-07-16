@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="landscape">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,12 +13,77 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SizeClassPractice" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Any Size" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlA-YN-rFu" userLabel="Any Size">
+                                <rect key="frame" x="300.5" y="177" width="66" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Compact Height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MSJ-8T-CUu" userLabel="Compact Height">
+                                <rect key="frame" x="271" y="148" width="125" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Regular Width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hrM-Vb-nGv">
+                                <rect key="frame" x="393.66666666666669" y="225.66666666666666" width="108.66666666666669" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jlA-YN-rFu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="EnV-Zr-2af"/>
+                            <constraint firstItem="MSJ-8T-CUu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HQk-DS-oA5"/>
+                            <constraint firstItem="hrM-Vb-nGv" firstAttribute="top" secondItem="jlA-YN-rFu" secondAttribute="bottom" constant="35.5" id="MSP-aL-TmU">
+                                <variation key="widthClass=regular" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="jlA-YN-rFu" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Qfc-y7-gmJ"/>
+                            <constraint firstItem="hrM-Vb-nGv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hh3-UV-6P8"/>
+                            <constraint firstItem="jlA-YN-rFu" firstAttribute="top" secondItem="MSJ-8T-CUu" secondAttribute="bottom" constant="3.5" id="n1T-kL-J4g">
+                                <variation key="heightClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="jlA-YN-rFu" firstAttribute="firstBaseline" secondItem="MSJ-8T-CUu" secondAttribute="baseline" constant="24" symbolType="layoutAnchor" id="oev-Cs-CTH"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="MSJ-8T-CUu"/>
+                                <exclude reference="hrM-Vb-nGv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="HQk-DS-oA5"/>
+                                <exclude reference="n1T-kL-J4g"/>
+                                <exclude reference="oev-Cs-CTH"/>
+                                <exclude reference="MSP-aL-TmU"/>
+                                <exclude reference="hh3-UV-6P8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="subviews">
+                                <include reference="MSJ-8T-CUu"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="HQk-DS-oA5"/>
+                                <include reference="n1T-kL-J4g"/>
+                                <exclude reference="oev-Cs-CTH"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="hrM-Vb-nGv"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="MSP-aL-TmU"/>
+                                <include reference="hh3-UV-6P8"/>
+                            </mask>
+                        </variation>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
